@@ -13,6 +13,10 @@ module MagickFilter
         cmd_convert(path, out_file, effect)
     end
 
+    def self.root
+    	File.expand_path('../..',__FILE__)
+  	end
+
 
     private
 
