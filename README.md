@@ -25,46 +25,46 @@ Or install it yourself as:
 In present there are three filters available in this Gem. Use the given below commands on console to convert photos.
 
 
-Original Image
+### Original Image
 
 <img src="/test_image/test.jpg" alt="Original"/>
 
 
-For Sketch Filter
+### For Sketch Filter
 
-`MagickFilter::Tool.process(image_path, "sketch")`
+**`MagickFilter::Tool.process(image_path, "sketch")`**
 
 
 <img src="/test_image/sketch.jpg" alt="Sketch"/>
 
 
-For Gold Filter
+### For Gold Filter
 
-`MagickFilter::Tool.process(image_path, "gold")`
+**`MagickFilter::Tool.process(image_path, "gold")`**
 
 
 <img src="/test_image/gold.jpg" alt="Gold"/>
 
 
-For Poster Filter
+### For Poster Filter
 
-`MagickFilter::Tool.process(image_path, "poster")`
+**`MagickFilter::Tool.process(image_path, "poster")`**
 
 
 <img src="/test_image/poster.jpg" alt="Poster"/>
 
 
-For Bright Filter
+### For Bright Filter
 
-`MagickFilter::Tool.process(image_path, "bright")`
+**`MagickFilter::Tool.process(image_path, "bright")`**
 
 
 <img src="/test_image/bright.jpg" alt="Bright"/>
 
 
-For Black & White Filter
+### For Black & White Filter
 
-`MagickFilter::Tool.process(image_path, "bw")`
+**`MagickFilter::Tool.process(image_path, "bw")`**
 
 
 <img src="/test_image/black&white.jpg" alt="Black & White"/>
