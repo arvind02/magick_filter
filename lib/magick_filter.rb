@@ -1,9 +1,6 @@
 require "magick_filter/version"
 require "filter"
-
-WRITE_PATH = "/home/arvind/workspace/test_img"
-  
-
+ 
 module MagickFilter
   class Tool
 	  	def self.process(path='', effect='')
@@ -42,7 +39,7 @@ module MagickFilter
 
 	    def self.cmd(bin, opts)
 	    	"#{bin} #{opts}".tap do |c|
-	      		puts "executing: #{c}"
+	      		#puts "executing: #{c}"
 	      		system("sudo " << c)      
 	    	end
 	    end
@@ -51,10 +48,11 @@ module MagickFilter
 	    	#in_file ||= current_source_file
 	    	#out_file ||= current_target_file
 	    	cmd(:convert, "#{in_file} #{get_effect_options(opts)} #{out_file}")
+	    	print "***Your file is available here to copy in desired location*** - #{out_file}"
 	    end
 
 	    def self.build_out_file_name(path)
-	      return "#{WRITE_PATH}/#{next_uuid}_output.#{get_file_extension(path)}"
+	      return "#{Filter::WRITE_PATH}/#{next_uuid}_output.#{get_file_extension(path)}"
 	    end
 
 	    def self.get_file_extension(path)

@@ -1,6 +1,8 @@
 # MagickFilter
 
-This Gem is an attempt to build Ruby Gem and release it to [rubygems.org](https://rubygems.org). If you want to convert your photo with some cool filters, you are at right place. This Gem is in early stage. I'll keep on adding some more filters and features with time.
+This Gem is an attempt to build Ruby Gem and release it to [rubygems.org](https://rubygems.org). If you want to convert your photo with some cool filters, you are at right place. This Gem is in early stage. I'll keep on adding some more filters and features with time. 
+
+This Gem is based on (Image Magick)(http://www.imagemagick.org/Usage/), So please make sure that you have image magick installed on your system. 
 
 
 
@@ -27,7 +29,7 @@ In present there are three filters available in this Gem. Use the given below co
 
 ### Original Image
 
-<img src="/test_image/test.jpg" alt="Original"/>
+<img src="/test_image/test.jpg" alt="Original" width=400 height=265 />
 
 
 ### For Sketch Filter
@@ -35,7 +37,7 @@ In present there are three filters available in this Gem. Use the given below co
 **`MagickFilter::Tool.process(image_path, "sketch")`**
 
 
-<img src="/test_image/sketch.jpg" alt="Sketch"/>
+<img src="/test_image/sketch.jpg" alt="Sketch" width=400 height=265 />
 
 
 ### For Gold Filter
@@ -43,7 +45,7 @@ In present there are three filters available in this Gem. Use the given below co
 **`MagickFilter::Tool.process(image_path, "gold")`**
 
 
-<img src="/test_image/gold.jpg" alt="Gold"/>
+<img src="/test_image/gold.jpg" alt="Gold" width=400 height=265 />
 
 
 ### For Poster Filter
@@ -51,7 +53,7 @@ In present there are three filters available in this Gem. Use the given below co
 **`MagickFilter::Tool.process(image_path, "poster")`**
 
 
-<img src="/test_image/poster.jpg" alt="Poster"/>
+<img src="/test_image/poster.jpg" alt="Poster" width=400 height=265/>
 
 
 ### For Bright Filter
@@ -59,7 +61,7 @@ In present there are three filters available in this Gem. Use the given below co
 **`MagickFilter::Tool.process(image_path, "bright")`**
 
 
-<img src="/test_image/bright.jpg" alt="Bright"/>
+<img src="/test_image/bright.jpg" alt="Bright" width=400 height=265 />
 
 
 ### For Black & White Filter
@@ -67,7 +69,7 @@ In present there are three filters available in this Gem. Use the given below co
 **`MagickFilter::Tool.process(image_path, "bw")`**
 
 
-<img src="/test_image/black&white.jpg" alt="Black & White"/>
+<img src="/test_image/black&white.jpg" alt="Black & White" width=400 height=265 />
 
 
 ## Development
