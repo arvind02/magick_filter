@@ -37,7 +37,7 @@ In present there are three filters available in this Gem. Use the given below co
 **`MagickFilter::Tool.process(image_path, "sketch")`**
 
 
-<img src="/test_image/sketch.jpg" alt="Sketch" width=400 height=298 />
+<img src="/test_image/sketch.jpg" alt="Sketch" width=450 height=298 />
 
 
 ### For Gold Filter
