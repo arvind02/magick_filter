@@ -7,7 +7,7 @@ module MagickFilter
 	    	parameter_missing?(path, effect)
 	        parse_if_image(path)
 	        out_file = build_out_file_name(path)
-	        cmd_convert(path, out_file, effect)
+	        out_file = cmd_convert(path, out_file, effect)
 	    end
 
 	    def self.root
@@ -40,7 +40,8 @@ module MagickFilter
 	    def self.cmd(bin, opts)
 	    	"#{bin} #{opts}".tap do |c|
 	      		#puts "executing: #{c}"
-	      		system("sudo " << c)      
+	      		#system("sudo " << c)  
+	      		system(c)      
 	    	end
 	    end
 
@@ -49,6 +50,7 @@ module MagickFilter
 	    	#out_file ||= current_target_file
 	    	cmd(:convert, "#{in_file} #{get_effect_options(opts)} #{out_file}")
 	    	print "***Your file is available here to copy in desired location*** - #{out_file}"
+	    	return out_file
 	    end
 
 	    def self.build_out_file_name(path)
