@@ -24,7 +24,7 @@ Or install it yourself as:
 
 ## Usage
 
-In present there are three filters available in this Gem. Use the given below commands on console to convert photos.
+In present there are five filters available in this Gem. Use the given below commands on console to convert photos.
 
 
 ### Original Image
