@@ -1,3 +1,5 @@
+<a href="https://badge.fury.io/rb/magick_filter"><img src="https://badge.fury.io/rb/magick_filter.svg" alt="Gem Version" height="18"></a>
+
 # MagickFilter
 
 This Gem is an attempt to build Ruby Gem and release it to [rubygems.org](https://rubygems.org). If you want to convert your photo with some cool filters, you are at right place. This Gem is in early stage. I'll keep on adding some more filters and features with time. 
