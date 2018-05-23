@@ -127,7 +127,7 @@ In present there are five filters available in this Gem. Use the given below com
 **`MagickFilter::Tool.process(image_path, "sepia")`**
 
 
-<img src="/test_image/sepia.jpg" alt="sepia" width=450 height=298 />
+<img src="/test_image/sepiya.jpg" alt="sepia" width=450 height=298 />
 
 
 ## Contributing
