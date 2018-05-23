@@ -3,7 +3,17 @@ module Filter
  		          gold: "+level-colors green,gold",  
  	              poster: "+dither  -posterize 6",
  	              bright: "-sigmoidal-contrast 4,0%",
- 	              bw: "-type Grayscale"}
+ 	              bw: "-type Grayscale",
+ 	              peach: "+dither -colors 2",
+ 	              navy: "+level-colors navy,lemonchiffon",
+ 	              firebrick: "+level-colors firebrick,yellow",
+ 	              contrast: "-sigmoidal-contrast 10,50%",
+ 	              poster2: "+dither -posterize 4",
+ 	              rough: "-dither FloydSteinberg -colors 8",
+ 	              sepia: "-sepia-tone 80%"}
 
 	WRITE_PATH = "/tmp" 	
 end
+
+
+

@@ -34,7 +34,7 @@ In present there are five filters available in this Gem. Use the given below com
 <img src="/test_image/test.jpg" alt="Original" width=450 height=298 />
 
 
-### For Sketch Filter
+### Sketch Filter
 
 **`MagickFilter::Tool.process(image_path, "sketch")`**
 
@@ -42,7 +42,7 @@ In present there are five filters available in this Gem. Use the given below com
 <img src="/test_image/sketch.jpg" alt="Sketch" width=450 height=298 />
 
 
-### For Gold Filter
+### Gold Filter
 
 **`MagickFilter::Tool.process(image_path, "gold")`**
 
@@ -50,7 +50,7 @@ In present there are five filters available in this Gem. Use the given below com
 <img src="/test_image/gold.jpg" alt="Gold" width=450 height=298 />
 
 
-### For Poster Filter
+### Poster Filter
 
 **`MagickFilter::Tool.process(image_path, "poster")`**
 
@@ -58,7 +58,7 @@ In present there are five filters available in this Gem. Use the given below com
 <img src="/test_image/poster.jpg" alt="Poster" width=450 height=298/>
 
 
-### For Bright Filter
+### Bright Filter
 
 **`MagickFilter::Tool.process(image_path, "bright")`**
 
@@ -66,12 +66,68 @@ In present there are five filters available in this Gem. Use the given below com
 <img src="/test_image/bright.jpg" alt="Bright" width=450 height=298 />
 
 
-### For Black & White Filter
+### Black & White Filter
 
 **`MagickFilter::Tool.process(image_path, "bw")`**
 
 
 <img src="/test_image/black&white.jpg" alt="Black & White" width=450 height=298 />
+
+
+### Peach Filter
+
+**`MagickFilter::Tool.process(image_path, "peach")`**
+
+
+<img src="/test_image/peach.jpg" alt="peach" width=450 height=298 />
+
+
+### Navy Filter
+
+**`MagickFilter::Tool.process(image_path, "navy")`**
+
+
+<img src="/test_image/navy.jpg" alt="navy" width=450 height=298 />
+
+
+### Firebrick Filter
+
+**`MagickFilter::Tool.process(image_path, "firebrick")`**
+
+
+<img src="/test_image/firebrick.jpg" alt="firebrick" width=450 height=298 />
+
+
+### Contrast Filter
+
+**`MagickFilter::Tool.process(image_path, "contrast")`**
+
+
+<img src="/test_image/contrast.jpg" alt="contrast" width=450 height=298 />
+
+
+### Poster2 Filter
+
+**`MagickFilter::Tool.process(image_path, "poster2")`**
+
+
+<img src="/test_image/poster2.jpg" alt="poster2" width=450 height=298 />
+
+
+### Rough Filter
+
+**`MagickFilter::Tool.process(image_path, "rough")`**
+
+
+<img src="/test_image/rough.jpg" alt="rough" width=450 height=298 />
+
+
+### Sepia Filter
+
+**`MagickFilter::Tool.process(image_path, "sepia")`**
+
+
+<img src="/test_image/sepia.jpg" alt="sepia" width=450 height=298 />
 
 
 ## Contributing
