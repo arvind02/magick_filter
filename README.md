@@ -34,12 +34,7 @@ In present there are five filters available in this Gem. Use the given below com
 <img src="/test_image/test.jpg" alt="Original" width=450 height=298 />
 
 
-### Sketch Filter
 
-**`MagickFilter::Tool.process(image_path, "sketch")`**
-
-
-<img src="/test_image/sketch.jpg" alt="Sketch" width=450 height=298 />
 
 
 ### Gold Filter
