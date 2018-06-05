@@ -12,6 +12,8 @@ module Filter
  	              rough: "-dither FloydSteinberg -colors 8",
  	              sepia: "-sepia-tone 80%"}
 
+ 	FRAME_TYPE = "-mattecolor Tomato -frame 20x20+10+10"              
+
 	WRITE_PATH = "/tmp" 	
 end
 

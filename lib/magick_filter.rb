@@ -10,6 +10,13 @@ module MagickFilter
 	        out_file = cmd_convert(path, out_file, effect)
 	    end
 
+	    def self.apply_frame(path='', color_type='')
+	    	parameter_missing?(path, color_type)
+	        parse_if_image(path)
+	        out_file = build_out_file_name(path)
+	        out_file = cmd_convert_frame(path, out_file, color_type)
+	    end
+
 	    def self.root
 	    	File.expand_path('../..',__FILE__)
 	  	end
@@ -53,6 +60,14 @@ module MagickFilter
 	    	return out_file
 	    end
 
+	     def self.cmd_convert_frame(in_file=nil, out_file=nil, opts)
+	    	#in_file ||= current_source_file
+	    	#out_file ||= current_target_file
+	    	cmd(:convert, "#{in_file} #{get_frame_type(opts)} #{out_file}")
+	    	print "***Your file is available here to copy in desired location*** - #{out_file}"
+	    	return out_file
+	    end
+
 	    def self.build_out_file_name(path)
 	      return "#{Filter::WRITE_PATH}/#{next_uuid}_output.#{get_file_extension(path)}"
 	    end
@@ -67,6 +82,10 @@ module MagickFilter
 		
 		def self.get_effect_options(effect)
 			Filter::EFFECT_MAP[effect.downcase.to_sym]
+		end
+
+		def self.get_frame_type(color_type)
+			Filter::FRAME_TYPE.gsub("Tomato", color_type)
 		end
   end
 end

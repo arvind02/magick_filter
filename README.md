@@ -2,10 +2,10 @@
 
 # MagickFilter
 
-This Gem is an attempt to build Ruby Gem and release it to [rubygems.org](https://rubygems.org). If you want to convert your photo with some cool filters, you are at right place. This Gem is in early stage. I'll keep on adding some more filters and features with time. 
+This Gem is an attempt to build Ruby Gem and release it to [rubygems.org](https://rubygems.org). If you want to convert your photo with some cool filters or wants to add frame with different colors, you are at right place. Latest version of this gem allows you to add frame to existing photo. This Gem is in early stage. I'll keep on adding some more filters and features with time. 
+
 
 This Gem is based on [Image Magick](http://www.imagemagick.org/Usage/), So please make sure that you have image magick installed on your system. 
-
 
 
 ## Installation
@@ -25,9 +25,82 @@ Or install it yourself as:
     $ gem install magick_filter
 
 ## Usage
+1. Latest version of this Gem supports adding frame to photo with different colors. You can choose any desired color for frame from [ImageMagick color list](https://www.imagemagick.org/script/color.php)
 
-In present there are five filters available in this Gem. Use the given below commands on console to convert photos.
+2. In present there are 12 filters available in this Gem. Use the given below commands ( from Filter Examples section ) on console to convert photos.
 
+## Frame Examples
+
+### Original Image
+
+<img src="/test_image/test.jpg" alt="Original" width=450 height=298 />
+
+
+### Snow Color Frame
+
+**`MagickFilter::Tool.apply_frame(image_path, "snow")`**
+
+
+<img src="/test_image/snow.jpg" alt="snow" width=450 height=298 />
+
+
+### LightPink Color Frame
+
+**`MagickFilter::Tool.apply_frame(image_path, "LightPink")`**
+
+
+<img src="/test_image/lightpink.jpg" alt="LightPink" width=450 height=298 />
+
+
+### Orchid1 Color Frame
+
+**`MagickFilter::Tool.apply_frame(image_path, "orchid1")`**
+
+
+<img src="/test_image/orchid1.jpg" alt="orchid1" width=450 height=298 />
+
+
+### SlateBlue1 Color Frame
+
+**`MagickFilter::Tool.apply_frame(image_path, "SlateBlue1")`**
+
+
+<img src="/test_image/slateblue1.jpg" alt="SlateBlue1" width=450 height=298 />
+
+
+### SlateGray4 Color Frame
+
+**`MagickFilter::Tool.apply_frame(image_path, "SlateGray4")`**
+
+
+<img src="/test_image/slategray4.jpg" alt="SlateGray4" width=450 height=298 />
+
+
+### DeepSkyBlue Color Frame
+
+**`MagickFilter::Tool.apply_frame(image_path, "DeepSkyBlue")`**
+
+
+<img src="/test_image/deepskyblue.jpg" alt="DeepSkyBlue" width=450 height=298 />
+
+
+### SpringGreen4 Color Frame
+
+**`MagickFilter::Tool.apply_frame(image_path, "SpringGreen4")`**
+
+
+<img src="/test_image/springgreen4.jpg" alt="SpringGreen4" width=450 height=298 />
+
+
+### Gold2 Color Frame
+
+**`MagickFilter::Tool.apply_frame(image_path, "gold2")`**
+
+
+<img src="/test_image/gold2.jpg" alt="gold2" width=450 height=298 />
+
+
+## Filter Examples
 
 ### Original Image
 
