@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["er.arvind02@gmail.com"]
 
   spec.summary       = %q{Photo Filters Gem}
-  spec.description   = %q{If you want to apply some cool filters on a photo with single command, this gem is going to help you.}
+  spec.description   = %q{Apply some cool instagram type filters on your photo. Would like to apply frames of different colors on photo, use this Gem. Handy and simple Gem to use. }
   spec.homepage      = "https://github.com/arvind02/magick_filter"
   spec.license       = "MIT"
   spec.files         = `git ls-files -z`.split("\x0").reject do |f|
