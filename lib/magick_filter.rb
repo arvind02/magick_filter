@@ -33,6 +33,7 @@ module MagickFilter
 		end
 
 		def self.parameter_missing?(path, effect)
+			err = ''
 			if path.blank? && effect.blank?
 				err = "***************Image Path and Effect Parameter Missing***********"
 			elsif path.blank?
@@ -40,8 +41,11 @@ module MagickFilter
 			elsif effect.blank?
 				err = "***************Effect Parameter Missing***********"
 			end	
-			return false
-			raise err
+			if err.blank?
+				return true
+			else
+				raise err
+			end
 		end
 
 		def self.cmd(bin, opts)
