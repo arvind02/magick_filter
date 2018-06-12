@@ -28,17 +28,17 @@ Or install it yourself as:
 ## Usage
 1. Latest version of this Gem supports adding frame to photo with different colors. You can choose any desired color for frame from [ImageMagick color list](https://www.imagemagick.org/script/color.php)
     ```ruby
-	a) **`MagickFilter::Tool.apply_frame(image_path, "snow")`**
-	b) **`MagickFilter::Tool.apply_frame(image_path, "LightPink")`**
-	c) **`MagickFilter::Tool.apply_frame(image_path, "SlateBlue1")`**
-	d) **`MagickFilter::Tool.apply_frame(image_path, "SpringGreen4")`**
+	a) MagickFilter::Tool.apply_frame(image_path, "snow")
+	b) MagickFilter::Tool.apply_frame(image_path, "LightPink")
+	c) MagickFilter::Tool.apply_frame(image_path, "SlateBlue1")
+	d) MagickFilter::Tool.apply_frame(image_path, "SpringGreen4")
     ```
 2. In present there are 12 filters available in this Gem. Use the given below commands ( from Filter Examples section ) on console to convert photos.
     ```ruby
-	a) **`MagickFilter::Tool.process(image_path, "sketch")`**
-	b) **`MagickFilter::Tool.process(image_path, "bright")`**
-	c) **`MagickFilter::Tool.process(image_path, "sepia")`**
-	d) **`MagickFilter::Tool.process(image_path, "rough")`**
+	a) MagickFilter::Tool.process(image_path, "sketch")
+	b) MagickFilter::Tool.process(image_path, "bright")
+	c) MagickFilter::Tool.process(image_path, "sepia")
+	d) MagickFilter::Tool.process(image_path, "rough")
     ```
 ## Frame Examples
 
