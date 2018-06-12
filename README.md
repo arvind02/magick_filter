@@ -2,8 +2,9 @@
 
 # MagickFilter
 
-This Gem is an attempt to build Ruby Gem and release it to [rubygems.org](https://rubygems.org). If you want to convert your photo with some cool filters or wants to add frame with different colors, you are at right place. Latest version of this gem allows you to add frame to existing photo. This Gem is in early stage. I'll keep on adding some more filters and features with time. 
+A powerful yet very simple to use gem to apply all sorts of cool instagram types of filters to your images or photos in your Ruby on Rails application. With this gem you can use all sorts of filters like Poster, Sepia, Navy, Sketch etc. You can apply frames of different colours to your images or photos.
 
+This Gem is an attempt to build Ruby Gem and release it to [rubygems.org](https://rubygems.org). Latest version of this gem allows you to add frame to existing photo. This Gem is in early stage. I'll keep on adding some more filters and features with time. 
 
 This Gem is based on [Image Magick](http://www.imagemagick.org/Usage/), So please make sure that you have image magick installed on your system. 
 
