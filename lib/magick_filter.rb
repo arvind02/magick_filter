@@ -4,17 +4,17 @@ require "filter"
 module MagickFilter
   class Tool
     def self.process(path='', effect='')
-      parameter_missing?(path, effect)
+      parameter_missing?(path, effect, "effect")
       parse_if_image(path)
       out_file = build_out_file_name(path)
       out_file = cmd_convert(path, out_file, effect)
     end
 
-    def self.apply_frame(path='', color_type='')
-      parameter_missing?(path, color_type)
+    def self.apply_frame(path='', color_type='', frame_style=nil)
+      parameter_missing?(path, color_type, "frame")
       parse_if_image(path)
       out_file = build_out_file_name(path)
-      out_file = cmd_convert_frame(path, out_file, color_type)
+      out_file = cmd_convert_frame(path, out_file, color_type, frame_style)
     end
 
     def self.root
@@ -32,15 +32,20 @@ module MagickFilter
       end
     end
 
-    def self.parameter_missing?(path, effect)
-      if path.blank? && effect.blank?
-        err = "***************Image Path and Effect Parameter Missing***********"
-      elsif path.blank?
-        err = "***************Image Path Missing***********"
-      elsif effect.blank?
-        err = "***************Effect Parameter Missing***********"
-      end	
-      return false
+    def self.parameter_missing?(path, effect, called_for)
+    	err = ''
+  		if path.blank? && effect.blank?
+      	err = "***************Image Path and Effect or Frame Color Parameter Missing***********"
+    	elsif path.blank?
+      	err = "***************Image Path Missing***********"
+    	elsif effect.blank?
+      	err = "***************Effect or Frame Color Parameter Missing***********"
+    	end	
+      if err.blank? 
+      	return false 
+ 			else
+ 				raise "#{err}"
+ 			end	
     end
 
     def self.cmd(bin, opts)
@@ -55,13 +60,13 @@ module MagickFilter
       #in_file ||= current_source_file
       #out_file ||= current_target_file
       cmd(:convert, "#{in_file} #{get_effect_options(opts)} #{out_file}")
-      print "***Your file is available here to copy in desired location*** - #{out_file}"
+      print "***Your Image is available here to copy at desired location*** - #{out_file}"
       return out_file
     end
 
-    def self.cmd_convert_frame(in_file=nil, out_file=nil, opts)
-      cmd(:convert, "#{in_file} #{get_frame_type(opts)} #{out_file}")
-      print "***Your file is available here to copy in desired location*** - #{out_file}"
+    def self.cmd_convert_frame(in_file=nil, out_file=nil, opt1, opt2)
+      cmd(:convert, "#{in_file} #{get_frame_type(opt1, opt2)} #{out_file}")
+      print "***Your Image is available here to copy at desired location*** - #{out_file}"
       return out_file
     end
 
@@ -81,8 +86,10 @@ module MagickFilter
       Filter::EFFECT_MAP[effect.downcase.to_sym]
     end
 
-    def self.get_frame_type(color_type)
-      Filter::FRAME_TYPE.gsub("Tomato", color_type)
+    def self.get_frame_type(color_type, frame_style)
+    	frame_style ||= "basic"
+    	frame_type = Filter::FRAME_TYPE[frame_style.downcase.to_sym]
+      frame_type = frame_type.gsub("Tomato", color_type)
     end
   end
 end

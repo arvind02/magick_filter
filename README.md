@@ -26,20 +26,40 @@ Or install it yourself as:
     $ gem install magick_filter
 
 ## Usage
-1. Latest version of this Gem supports adding frame to photo with different colors. You can choose any desired color for frame from [ImageMagick color list](https://www.imagemagick.org/script/color.php)
+1. Latest version of this Gem supports adding frames to photo with different colors. You can choose any desired color for frame from [ImageMagick color list](https://www.imagemagick.org/script/color.php)
+	```ruby
+	MagickFilter::Tool.apply_frame(image_path, frame_color, frame_type)	
+	```    
+
     ```ruby
-	a) MagickFilter::Tool.apply_frame(image_path, "snow")
-	b) MagickFilter::Tool.apply_frame(image_path, "LightPink")
-	c) MagickFilter::Tool.apply_frame(image_path, "SlateBlue1")
-	d) MagickFilter::Tool.apply_frame(image_path, "SpringGreen4")
+    a) Option 1st => Basic Frame
+    	MagickFilter::Tool.apply_frame(image_path, "snow", "basic")
+    b) Option 2nd => Sunken Frame
+    	MagickFilter::Tool.apply_frame(image_path, "snow", "sunken")			 
     ```
+    ```ruby
+    Different color options example - 
+	a) MagickFilter::Tool.apply_frame(image_path, "snow", "basic")
+	b) MagickFilter::Tool.apply_frame(image_path, "LightPink", "BASIC")
+	c) MagickFilter::Tool.apply_frame(image_path, "SlateBlue1", :basic)
+    ```
+
+### Default frame type is "basic", frame_type is case insensitive. You can add "basic", "BASIC" or :basic    
+
 2. In present there are 12 filters available in this Gem. Use the given below commands ( from Filter Examples section ) on console to convert photos.
     ```ruby
+    MagickFilter::Tool.process(image_path, filter_type)
+    ```
+
+    ```ruby
 	a) MagickFilter::Tool.process(image_path, "sketch")
-	b) MagickFilter::Tool.process(image_path, "bright")
-	c) MagickFilter::Tool.process(image_path, "sepia")
+	b) MagickFilter::Tool.process(image_path, "BRIGHT")
+	c) MagickFilter::Tool.process(image_path, :sepia)
 	d) MagickFilter::Tool.process(image_path, "rough")
     ```
+
+### Filter type is case insensitive, you can add "sketch", "SKETCH" or :sketch  
+
 ## Frame Examples
 
 ### Original Image
@@ -47,33 +67,33 @@ Or install it yourself as:
 <img src="/test_image/test.jpg" alt="Original" width=450 height=298 />
 
 
-### Snow Color Frame
+### Snow Color Frame with basic frame
 
-**`MagickFilter::Tool.apply_frame(image_path, "snow")`**
+**`MagickFilter::Tool.apply_frame(image_path, "snow", "basic")`**
 
 
 <img src="/test_image/snow.jpg" alt="snow" width=450 height=298 />
 
 
-### LightPink Color Frame
+### LightPink Color Frame with sunken frame
 
-**`MagickFilter::Tool.apply_frame(image_path, "LightPink")`**
+**`MagickFilter::Tool.apply_frame(image_path, "LightPink", "sunken")`**
 
 
 <img src="/test_image/lightpink.jpg" alt="LightPink" width=450 height=298 />
 
 
-### Orchid1 Color Frame
+### Orchid1 Color Frame with basic frame
 
-**`MagickFilter::Tool.apply_frame(image_path, "orchid1")`**
+**`MagickFilter::Tool.apply_frame(image_path, "orchid1", "basic")`**
 
 
 <img src="/test_image/orchid1.jpg" alt="orchid1" width=450 height=298 />
 
 
-### SlateBlue1 Color Frame
+### SlateBlue1 Color Frame with sunken frame
 
-**`MagickFilter::Tool.apply_frame(image_path, "SlateBlue1")`**
+**`MagickFilter::Tool.apply_frame(image_path, "SlateBlue1", "sunken")`**
 
 
 <img src="/test_image/slateblue1.jpg" alt="SlateBlue1" width=450 height=298 />
