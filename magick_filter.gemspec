@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["er.arvind02@gmail.com"]
 
   spec.summary       = %q{Apply Filters or Frames on Photo or Image}
-  spec.description   = %q{A powerful yet very simple to use gem to apply all sorts of cool instagram types of filters to your images or photos in your Ruby on Rails application. With this gem you can use all sorts of filters like Poster, Sepia, Navy, Sketch etc. You can apply frames of different colours to your images or photos. Pick any colour for frames from https://www.imagemagick.org/script/color.php }
+  spec.description   = %q{A powerful yet very simple to use gem to apply all sorts of cool instagram types of filters to your images or photos in your Ruby on Rails application. With this gem you can use all sorts of filters like Poster, Sepia, Navy, Sketch etc. You can apply frames ( In present tow types of frames ) of different colours to your images or photos. Pick any colour for frames from https://www.imagemagick.org/script/color.php }
   spec.homepage      = "https://github.com/arvind02/magick_filter"
   spec.license       = "MIT"
   spec.files         = `git ls-files -z`.split("\x0").reject do |f|
